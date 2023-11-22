@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+h1,
+h2,
+section,
+p,
+span,
+svg {
+  transition: background-color 0.8s, color 0.8s;
+}
+
+
+/*main navbar thing */
+.main-nav {
+  font-size: 18px;
+  text-align: center;
+  z-index: 99999;
+
+  position: sticky;
+  /* width: 100%; */
+  margin: 0 auto;
+  /* max-width: 1100px; */
+
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li {
+  display: inline-block;
+  padding: 20px 20px;
+
+}
+
+.main-nav li a {
+  color: var(--color-text);
+  display: flex;
+  text-decoration: none;
+  padding: 0px 16px;
+  display: inline-block;
+  position: relative;
+  /* border-radius: 30px; */
+}
+
+
+.main-nav li a svg {
+  fill: var(--color-text);
+  vertical-align: middle;
+
+}
+
+.main-nav li:hover>a,
+.main-nav li a:hover {
+  opacity: 0.75;
+}
+
+
+
+/* header------------------------------------------------------ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 14px;
+  z-index: 99999;
+  /* background-color: var(--color-background); */
+
+}
+
+/* -------------------------------------------------------------- */
+:root {
+  /*light theme var*/
+  --color-text-light: rgb(89, 100, 148);
+  --color-background-light: white;
+  --color-pink-light: rgb(255, 211, 224);
+
+  /*dark theme var*/
+  --color-text-dark: white;
+  --color-background-dark: rgb(51, 63, 128);
+}
+
+.light-theme {
+  --color-text: var(--color-text-light);
+  --color-background: var(--color-background-light);
+  --color-pink: var(--color-pink-light);
+}
+
+.dark-theme {
+  --color-text: var(--color-text-dark);
+  --color-background: var(--color-background-dark);
+  --color-pink: var(--color-text-dark);
+}
+
+/*Experience -----------------------------*/
+
+.experience {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.experience-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+/*Page itself -----------------------------*/
+.page {
+  width: 100%;
+  height: 100vh;
+}
+
+.page-wrapper {
+  position: relative;
+}
+
+/*togglebar for light and dark mode-----------------------------*/
+.toggle-bar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: -10px;
+  right: 48px;
+  z-index: 99999999;
+}
+
+.sun-wrapper,
+.moon-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text);
+
+}
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  width: 56px;
+  height: 28px;
+  background-color: var(--color-pink);
+  border-radius: 999px;
+  margin: 0px 16px;
+  border: none;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 3px;
+}
+
+.toggle-circle {
+  position: absolute;
+  left: 6px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-background);
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-button:hover .toggle-circle {
+  transform: scale(0.9);
+}
+
+.slide {
+  left: 28px;
+}
+
+
+/*Section-----------------------------*/
+.section-margin {
+  height: 30px;
+  width: 100%;
+}
+
+.name{
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-left: 30px;
+  color: var(--color-text);
+  text-align: left;
+  
+  
+}
+
+.name a {
+  width: 100%;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-top: 18px;
+  color: var(--color-text);
+  text-align: left;
+  
+}
+
+
+.section {
+  position: sticky;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  padding: 100px 4%;
+  margin: 0;
+  background-color: var(--color-background);
+  overflow: hidden;
+  overflow-y: scroll;
+
+  transform: translateX(-800px);
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-text);
+  border-radius: 50px;
+}
+
+.left {
+  margin-right: auto;
+  left: -50%;
+
+}
+
+.section-intro-wrapper {
+  position: relative;
+  padding: 10% 5%;
+  border-bottom: 10px dotted var(--color-pink);
+}
+
+.section-detail-wrapper {
+  position: relative;
+  padding: 10% 5%;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-top: 64px;
+  color: var(--color-text);
+  text-align: center;
+
+}
+
+.section-text {
+  line-height: 2;
+  margin-top: 18px;
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+/*Fancy decoration section-----------------------------*/
+.section-title {
+  position: relative;
+  color: var(--color-pink);
+}
+
+.section-title-text {
+  display: block;
+  font-size: 40px;
+  font-weight: 500px;
+  transform-origin: left;
+  text-transform: uppercase;
+  color: var(--color-pink);
+}
+
+
+/*Hero-----------------------------*/
+
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.hero-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  color: var(--color-text);
+}
+
+.hero-main {
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  color: var(--color-text);
+}
+
+.hero-second {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  color: var(--color-text);
+}
+
+.hero-main-title {
+  font-size: 64px;
+  color: var(--color-text);
+}
+
+.hero-main-description {
+  font-size: 20px;
+  color: var(--color-text);
+
+}
+
+.hero-second-subheading {
+  font-size: 32px;
+  text-transform: uppercase;
+  color: var(--color-text);
+
+}
+
+/* Media Queries */
+
+@media (max-width: 968px) {
+  .section {
+    width: 50%;
+  }
+
+
+}
+
+#close-btn {
+  position: fixed;
+  top: 5%;
+  left: calc(50% - 80px);
+  fill: var(--color-text);
+  z-index: 9999999999;
+}
+
+img {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.imgthumb {
+  margin-left: 10%;
+  margin-right: 10%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.imgthumb img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+  opacity: .6;
+}
+
+.imgthumb img:hover {
+  opacity: 1;
+}
+
+.imgslider {
+  margin-left: 10%;
+  margin-right: 10%;
+  position: center;
+}
+
+
+.imgcon {
+  height: 100%;
+  width: auto;
+  display: flex;
+  position: center;
+}

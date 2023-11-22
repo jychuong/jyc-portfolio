@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="JYChuong">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style3.css">
+  <script src="/Models/totoro.js" type="module"></script>
+  <script src="/Models/catbus.js" type="module"></script>
+  <script src="/Models/nuggets.js" type="module"></script>
+</head>
+
+<header>
+  <h1><a href="index.html">J.Y.CHUONG</a></h1>
+</header>
+
+<body>
+
+  <h2> THE NUGGETS </h2>
+  <div class="txtcontainer">
+    <p>
+      The Nuggets is a group collaborative project where each of our team members recreated some of our
+      favorite films but as if they were filmed with chickens! Everyone used my chicken model as the base for their
+      characters.
+      <br>
+      Created with: Blender, Unity, Adobe CC
+      <br>
+      <a href="https://the-nuggets.itch.io/the-nuggets" target="_blank" style="color:#346ECE;">Click here for download.
+      </a>
+    </p>
+
+  </div>
+
+  <div class="imgslider">
+    <div class="imgcon">
+      <img id="imageBox" src="images/nhome.png">
+    </div>
+
+    <div class="imgthumb2">
+      <img src="images/nhome.png" onclick="myFunction(this)">
+      <img src="images/totoro.png" onclick="myFunction(this)">
+      <img src="images/crunner.png" onclick="myFunction(this)">
+      <img src="images/howl.png" onclick="myFunction(this)">
+      <img src="images/red.png" onclick="myFunction(this)">
+    </div>
+  </div>
+  <div class="txtcontainer">
+    <p>
+       We were inspired by cartoons and comic
+      humor, we aimed for a simple yet funny retelling of movies such as <i>Blade Runner,
+      My Neighbor Totoro, Howl's Moving Castle,</i> and <i>Turning Red</i>. Aesthetically, we worked with a low poly (but shaded
+      smooth) and simple colors/materials. Using Unity, we linked each of these movies by pathways that lead to a portal directing to the next.
+    </p>
+  </div>
+
+  <br>
+  <hr style="width:50%">
+  <div class="txtcontainer">
+    <p>
+      Catbus and Totoro Chicken Model
+    </p>
+  </div>
+  <div class="container2">
+    <div id="space"> </div>
+    <div id="space2"> </div>
+  </div>
+  <br>
+
+  <hr style="width:50%">
+  <div class="txtcontainer">
+    <p>
+      Combined build that I used for a base in Unity.
+
+    </p>
+  </div>
+
+  <div class="container2" style="background-color: white;">
+    <div id="space3"> </div>
+    <!-- <div id= "space4"> </div> -->
+  </div>
+
+  <hr style="width:50%">
+
+  <footer>
+    ©J.Y.Chuong 2023
+  </footer>
+
+  <script>
+    function myFunction(imgthumb2) {
+      var fullImg = document.getElementById("imageBox");
+      fullImg.src = imgthumb2.src;
+    }
+  </script>
+
+</body>
+
+</html>

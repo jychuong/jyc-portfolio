@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="JYChuong">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style3.css">
+  <script src="/Models/bun.js" type="module"></script>
+  <script src="/Models/squid.js" type="module"></script>
+  <script src="/Models/wrc.js" type="module"></script>
+  <script src="/Models/sq.js" type="module"></script>
+</head>
+
+<header>
+<h1><a href= "index.html">J.Y.CHUONG</a></h1>
+</header>
+
+<body>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<h2> FEELIN' SNACKISH </h2>
+<div class ="txtcontainer">
+  <p>
+    Feelin’ Snackish is a 3d virtual installation based on two snacks from childhood:
+    White Rabbit Candy and Dried Squid.
+    <br>
+    Created with: Blender, Unity, Procreate, Adobe After Effects, Adobe Illustrator
+    <br>
+    <a href= "https://jychuong.itch.io/feelin-snackish" target="_blank" style ="color:#346ECE;">Click here for download. </a>
+   </p>
+
+</div>
+
+<div class = "imgslider">
+  <div class = "imgcon">
+    <img id = "imageBox" src = "images/rabbit.png">
+  </div>
+
+  <div class = "imgthumb">
+  <img src ="images/rabbit.png" onclick ="myFunction(this)">
+  <img src ="images/home.png" onclick ="myFunction(this)">
+  <img src ="images/squid.png" onclick ="myFunction(this)">
+</div>
+</div>
+
+<br>
+<hr style ="width:50%">
+<div class ="txtcontainer">
+  <p>
+    Characters created for the two snack worlds. Ended up not using model on the right.
+ </p>
+</div>
+<div class ="container2">
+  <div id= "space"> </div>
+  <div id= "space2"> </div>
+</div>
+<br>
+<hr style ="width:50%">
+<div class ="txtcontainer">
+  <p>
+    Base islands without extra objects.
+ </p>
+</div>
+
+<div class ="container2" style = "background-color: white;">
+  <div id= "space3"> </div>
+  <div id= "space4"> </div>
+</div>
+
+<br>
+<hr style ="width:50%">
+<div class ="txtcontainer">
+  <p>
+    Other assets that I created for this project: Custom materials that I made in Illustrator for the White Rabbit
+    Candy bag and candies, and for the dried squid bag. The bunny gifs were displayed as 2d planes.
+    The ocean gif was meant to be on top of the beach for the squid island however, it did not
+    display in Unity as well as it did in Blender so I removed it. Both gifs were drawn in Procreate then animated
+    in After Effects.
+ </p>
+</div>
+<div class ="container2">
+<div class="slickss">
+  <div><img src ="images/wrbag.png"></div>
+  <div><img src ="images/wrcwrapper.png"></div>
+  <div><img src ="images/wrcbag.png"></div>
+  <div><img src ="images/bunn.gif"></div>
+  <div><img src ="images/bun2.gif"></div>
+  <div><img src ="images/sqbag.png"></div>
+  <div><img src ="images/sqbag2.png"></div>
+  <div><img src ="images/ocean.gif"></div>
+</div>
+</div>
+<br>
+<hr style ="width:50%">
+
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript" src="slick.js"></script>
+
+
+<footer>
+  ©J.Y.Chuong 2023
+</footer>
+
+<script>
+  function myFunction(imgthumb){
+    var fullImg = document.getElementById("imageBox");
+    fullImg.src = imgthumb.src;
+  }
+</script>
+
+<script>
+  $(document).ready(function(){
+  $('.slickss').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    slidesToScroll:3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3,
+        }
+      }
+    ]
+  });
+});
+</script>
+
+</body>
+
+</html>
