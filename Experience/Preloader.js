@@ -282,7 +282,6 @@ export default class Preloader extends EventEmitter {
 
     onScroll(e) {
         if (e.deltaY > 0) {
-            console.log("added event");
             window.removeEventListener("wheel", this.scrollOnceEvent);
             this.playIntro2();
 
@@ -296,7 +295,6 @@ export default class Preloader extends EventEmitter {
 
     async playIntro2() {
         await this.secondIntro();
-        this.emit("enablecontrols");
     }
 
 
