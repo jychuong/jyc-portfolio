@@ -45,7 +45,7 @@ export default class Camera {
         this.controls.enablePan = false;
 
         this.controls.maxPolarAngle = 1.4;
-        this.controls.minPolarAngle = 1;
+        this.controls.minPolarAngle = 1.2;
 
         this.controls.minAzimuthAngle = -Math.PI/5;
         this.controls.maxAzimuthAngle = 0.25;

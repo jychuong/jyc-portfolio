@@ -35,7 +35,7 @@ export default class Preloader extends EventEmitter {
                 onComplete: () =>{
                     document.querySelector(".preloader").classList.add("hidden");
                 }
-            });
+            })
 
             this.tl2.to(this.roomChildren.toys.scale, {
 

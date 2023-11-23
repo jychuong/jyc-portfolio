@@ -1,4 +1,3 @@
-import * as THREE from "three";
 import Experience from "../Experience.js";
 import GSAP from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
@@ -100,7 +99,12 @@ export default class Controls {
                             y: "-50vh",
                             duration: 1.5
                         }, "same")
+                        .to(".hero-main-title", {
+                            x: "-50%",
+                            duration: 1.5
+                        }, "same")
                         
+
 
                     GSAP.delayedCall(1.5, this.enableCloseBtn);
 
@@ -315,6 +319,10 @@ export default class Controls {
                     this.tl4.to(".main-nav", {
                         y: "0vh",
                         duration: .8
+                    }, "same")
+                    .to(".hero-main-title", {
+                        x: "0%",
+                        duration: 1.5
                     }, "same")
 
 

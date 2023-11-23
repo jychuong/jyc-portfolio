@@ -38,17 +38,6 @@ body {
    /* background-color: #9FC4E7; */
   }
   
-  /* one image one tex box */
-  .txt2{
-    margin-left: 10%;
-   margin-right: 10%;
-   grid-template-columns: 1fr;
-   grid-gap: 15px;
-   display:flex;
-   align-items: center;
-   justify-content: center;
-   text-align: left;
-  }
   
   .imgthumb{
     margin-left: 10%;
@@ -182,17 +171,6 @@ body {
     position: relative;
   }
   
-  /* image center container */
-  .iccontainer{
-    text-align: center;
-    color: gray;
-    font-size: 20px;
-    font-weight:1;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-top: 50px;
-    padding-bottom: 25px;
-  }
   
   ul{
     list-style-type: none;
