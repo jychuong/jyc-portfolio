@@ -9,6 +9,7 @@ export default class Room {
         this.resources = this.experience.resources;
         this.room = this.resources.items.room;
         this.actualRoom = this.room.scene;
+        this.roomChildren ={};
         this.lerp = {
             current: 0,
             target: 0,
@@ -19,13 +20,13 @@ export default class Room {
         this.onMouseMove();
 
     }
-    
+
     setModel() {
         this.scene.add(this.actualRoom);
-        this.actualRoom.rotation.y = Math.PI / 2; 
-        this.actualRoom.scale.set(1.2,1.2,1.2);
-        this.actualRoom.position.set(-0.5,0,0);
-        
+        this.actualRoom.rotation.y = Math.PI / 2;
+        this.actualRoom.scale.set(1.2, 1.2, 1.2);
+        this.actualRoom.position.set(-0.5, 0, 0);
+
         this.actualRoom.children.forEach(child => {
             child.castShadow = true;
             child.receiveShadow = true;
@@ -43,8 +44,11 @@ export default class Room {
                 });
             }
 
-  
-         
+            child.scale.set(0, 0, 0);
+            if(child.name === "bed"){
+                child.scale.set (0,0,0);
+            }
+            this.roomChildren[child.name] = child;
         });
 
 
@@ -60,9 +64,9 @@ export default class Room {
         const height = 2;
         const intensity = .8;
         const rectLight = new THREE.RectAreaLight(
-            0xFFCD84, 
-            intensity, 
-            width, 
+            0xFFCD84,
+            intensity,
+            width,
             height);
         rectLight.position.set(0.25, 2, 1);
         rectLight.rotation.x = -Math.PI / 2;

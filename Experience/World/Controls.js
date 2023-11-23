@@ -25,14 +25,10 @@ export default class Controls {
             }
         });
 
-        this.room.children.forEach((child) => {
-            if (child.type === "RectAreaLight") {
-                this.rectLight = child;
-            }
-        });
 
 
         GSAP.registerPlugin(ScrollTrigger);
+        document.querySelector(".page").style.overflow = "visible";
 
         this.animations();
         this.setUpEvents();
@@ -104,10 +100,7 @@ export default class Controls {
                             y: "-50vh",
                             duration: 1.5
                         }, "same")
-                        .to(".hero", {
-                            x: "-100vw",
-                            duration: 1.5
-                        }, "same");
+                        
 
                     GSAP.delayedCall(1.5, this.enableCloseBtn);
 
@@ -151,14 +144,11 @@ export default class Controls {
 
                         duration: 1.5
                     }, "same")
-                    .to(".main-nav", {
-                        y: "-50vh",
-                        duration: 1.5
-                    }, "same")
-                    .to(".hero", {
-                        x: "-100vw",
-                        duration: 1.5
-                    }, "same");
+                        .to(".main-nav", {
+                            y: "-50vh",
+                            duration: 1.5
+                        }, "same")
+
                     GSAP.delayedCall(1.5, this.enableCloseBtn);
                 });
 
@@ -209,14 +199,11 @@ export default class Controls {
                         x: "0vw",
                         duration: 1.5
                     }, "same")
-                    .to(".main-nav", {
-                        y: "-50vh",
-                        duration: 1.5
-                    }, "same")
-                    .to(".hero", {
-                        x: "-100vw",
-                        duration: 1.5
-                    }, "same");
+                        .to(".main-nav", {
+                            y: "-50vh",
+                            duration: 1.5
+                        }, "same")
+
                     GSAP.delayedCall(1.5, this.enableCloseBtn);
                 });
 
@@ -267,20 +254,16 @@ export default class Controls {
 
                         duration: 1.5
                     }, "same")
-                    .to(".main-nav", {
-                        y: "-50vh",
-                        duration: 1.5
-                    }, "same")
-                    .to(".hero", {
-                        x: "-100vw",
-                        duration: 1.5
-                    }, "same");
-       
+                    this.tl5.to(".main-nav", {
+                            y: "-50vh",
+                            duration: 1.5
+                        }, "same")
+
+
                     GSAP.delayedCall(1.5, this.enableCloseBtn);
                 });
                 /////////////reset ///////////////////
                 document.getElementById('close-btn').addEventListener('click', () => {
-                    // this.resetCamera();
                     this.disableCloseBtn();
                     this.camera.controls.enabled = true;
                     this.tl4 = new GSAP.timeline();
@@ -290,53 +273,50 @@ export default class Controls {
                         y: 3.1443428682390167,
                         z: 5.230721743030281,
                         duration: 1,
-                    }, "same");
+                    }, "same")
 
                     this.tl4.to(this.camera.orthographicCamera.rotation, {
                         x: -0.5707963267948967,
                         y: 0,
                         z: 0,
                         duration: 1,
-                    }, "same");
+                    }, "same")
                     this.tl4.to(this.room.scale, {
                         x: 1.3,
                         y: 1.3,
                         z: 1.3,
                         duration: 1,
-                    }, "same");
+                    }, "same")
                     this.tl4.to(this.room.position, {
                         x: -0.5,
                         y: 0,
                         z: 1.3,
                         duration: 1,
-                    }, "same");
+                    }, "same")
                     this.tl4.to(this.rectLight, {
                         width: 2,
                         height: 2,
                         duration: 1
-                    }, "same");
+                    }, "same")
                     this.tl4.to(this.pointLight.position, {
                         x: -0.5,
                         y: .1,
                         z: 0.05568,
                         duration: 1
-                    }, "same");
+                    }, "same")
                     this.tl4.to(this.pointLight, {
                         intensity: .8,
                         duration: 1
-                    }, "same");
+                    }, "same")
                     this.tl4.to(".section", {
                         x: "-100vw",
                         duration: 1
                     }, "same")
-                    .to(".main-nav", {
+                    this.tl4.to(".main-nav", {
                         y: "0vh",
                         duration: .8
                     }, "same")
-                    .to(".hero", {
-                        x: "0vw",
-                        duration: 1
-                    }, "same");
+
 
                 });
 
