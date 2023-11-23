@@ -25,7 +25,6 @@ export default class Preloader extends EventEmitter {
         convert(document.querySelector(".intro-text2"));
         this.room = this.experience.world.room.actualRoom;
         this.roomChildren = this.experience.world.room.roomChildren;
-        console.log(this.roomChildren);
     }
     firstIntro() {
         return new Promise((resolve) => {
@@ -256,27 +255,18 @@ export default class Preloader extends EventEmitter {
                     ease: "back.out(2)",
                     duration: .5,
                 }, ">-0.4")
-                .to(
-                    ".hero-main-title",
-                    {
+                .to(".hero-main-title",{
                         x: '0%',
                         ease: "power1.out",
                         duration: .5,
-                    },
-                    "last", ">-0.3")
-                .to(
-                    ".hero-main-description",
-                    {
+                    },"last", ">-0.3")
+                .to(".hero-main-description",{
                         x: '0%',
                         ease: "power1.out",
                         duration: .5,
                         onComplete: resolve
-                    },
-                    "last", ">-0.3");
-
+                    },"last", ">-0.3");
         });
-
-
 
     }
 
@@ -296,6 +286,4 @@ export default class Preloader extends EventEmitter {
     async playIntro2() {
         await this.secondIntro();
     }
-
-
 }
