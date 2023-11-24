@@ -92,13 +92,12 @@ export default class Preloader extends EventEmitter {
 
             this.tl.to(".intro-text .animatedis", {
                 yPercent: 100,
-                stagger: 0.02,
                 ease: "back.in(1.7)",
             })
             this.tl.to(".intro-text2 .animatedis", {
                 yPercent: 100,
                 ease: "back.in(1.7)",
-            })
+            },">-0.5")
                 .to(
                     ".arrow-svg-wrapper",
                     {
