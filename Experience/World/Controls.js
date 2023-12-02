@@ -23,7 +23,6 @@ export default class Controls {
             }
         });
         GSAP.registerPlugin(ScrollTrigger);
-        document.querySelector(".page").style.overflow = "visible";
         this.animations();
         this.setUpEvents();
     }
@@ -215,7 +214,6 @@ export default class Controls {
                         x: -0.05155554232803819,y: 3.1443428682390167,z: 5.230721743030281,
                         duration: 1,
                     }, "same")
-
                     this.tl4.to(this.camera.orthographicCamera.rotation, {
                         x: -0.5707963267948967,y: 0,z: 0,
                         duration: 1,

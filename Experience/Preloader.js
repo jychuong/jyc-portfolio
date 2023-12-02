@@ -199,17 +199,17 @@ export default class Preloader extends EventEmitter {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
                     duration: .5,
-                }, "shelf", ">-0.3")
+                }, "shelf", ">-0.7")
                 .to(this.roomChildren.snakeplant.scale, {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
                     duration: .5,
-                }, ">-0.4")
+                }, ">-0.8")
                 .to(this.roomChildren.paintings.scale, {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
                     duration: .5,
-                }, ">-0.4")
+                }, ">-0.5")
                 .to(".hero-main-title", {
                     x: '0%',
                     ease: "power1.out",

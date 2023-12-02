@@ -27,9 +27,6 @@ export default class Camera {
             50
         );
 
-        const size = 20;
-        const divisions = 20;
-
         this.scene.add(this.orthographicCamera);
         this.orthographicCamera.rotation.x = -Math.PI / 6
         this.orthographicCamera.position.y = 3.5;
@@ -49,13 +46,7 @@ export default class Camera {
 
         this.controls.minAzimuthAngle = -Math.PI/5;
         this.controls.maxAzimuthAngle = 0.25;
-        
-        // old default stuff
-        // this.controls.maxPolarAngle = 1.4;
-        // this.controls.minPolarAngle = 1;
-    
-        // this.controls.minAzimuthAngle = -0.6;
-        // this.controls.maxAzimuthAngle = 0.25;
+
     }
 
 
