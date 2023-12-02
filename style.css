@@ -38,6 +38,7 @@ svg {
   font-weight: 500;
   font-size: 20px;
   color: var(--color-text);
+  text-align: center;
   transform: translate(-50%, -50%);
 }
 .intro-text2{
@@ -45,7 +46,7 @@ svg {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 54%;
+  top: 53%;
   left: 50%;
   font-weight: 500;
   font-size: 16px;
@@ -55,8 +56,8 @@ svg {
 
 .arrow-svg-wrapper{
   position: absolute;
-  top: 54%;
-  left: 48%;
+  top: 53%;
+  left: 47.5%;
   fill: var(--color-text);
   animation: bounce 0.5s ease-in alternate infinite;
   transform: translate(-50%, -50%);
@@ -91,43 +92,18 @@ svg {
 }
 
 .loading{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.circle{
-  width: 10px;
-  height: 10px;
+  margin: auto;
+  border: 15px dotted rgb(89, 100, 148);
   border-radius: 50%;
-  margin: 6px;
-  background-color: var(--color-text);
-  animation: load 1s ease-in-out infinite;
+  width: 100px;
+  height: 100px;
+  animation: spinner 3.5s linear infinite;
 }
 
-.circle:nth-child(2){
-  animation-delay: 0.1s;
-}
 
-.circle:nth-child(3){
-  animation-delay: 0.2s;
-}
-
-@keyframes load {
-  0% {
-    transform: translateY(0)
-  }
-
-  20% {
-    transform: translateY(-12px)
-  }
-
-  40% {
-    transform: translateY(0)
-  }
-  
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /*main navbar thing */
@@ -391,9 +367,7 @@ h2{
   color: var(--color-pink);
 }
 
-
 /*Hero-----------------------------*/
-
 
 .hero {
   width: 100vw;
@@ -479,7 +453,6 @@ img {
   margin-right: 10%;
   position: center;
 }
-
 
 .imgcon {
   height: 100%;
