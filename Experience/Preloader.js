@@ -41,7 +41,7 @@ export default class Preloader extends EventEmitter {
             }, "same")
             this.tl2.to(".intro-text .animatedis", {
                 yPercent: -100,
-                stagger: 0.05,
+                stagger: 0.02,
                 ease: "back.out(1.7)",
             }, "same")
             this.tl2.to(".intro-text2 .animatedis", {
