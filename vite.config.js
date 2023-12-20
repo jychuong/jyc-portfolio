@@ -7,7 +7,7 @@ export default defineConfig(() => {
       ViteImageOptimizer({
         /* pass your config */
         png: {
-            quality: 80,
+            quality: 50,
           },
       }),
     ],
