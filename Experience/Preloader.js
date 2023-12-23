@@ -230,12 +230,42 @@ export default class Preloader extends EventEmitter {
             this.playIntro2();
         }
     }
+    
+    onTouch(e) {
+        this.initalY = e.touches[0].clientY;
+    }
+
+    onTouchMove(e) {
+        let currentY = e.touches[0].clientY;
+        let difference = this.initalY - currentY;
+        if (difference > 0) {
+            console.log("swipped up");
+            this.removeEventListeners();
+            this.playIntro2();
+        }
+        this.intialY = null;
+    }
+
+    removeEventListeners() {
+        window.removeEventListener("wheel", this.scrollOnceEvent);
+        window.removeEventListener("touchstart", this.touchStart);
+        window.removeEventListener("touchmove", this.touchMove);
+    }
+
+
     async playIntro() {
         await this.firstIntro();
         this.scrollOnceEvent = this.onScroll.bind(this)
+        this.touchStart = this.onTouch.bind(this);
+        this.touchMove = this.onTouchMove.bind(this);
         window.addEventListener("wheel", this.scrollOnceEvent);
+        window.addEventListener("touchstart", this.touchStart);
+        window.addEventListener("touchmove", this.touchMove);
+        this.camera.controls.enabled = false;
     }
     async playIntro2() {
         await this.secondIntro();
+        this.camera.controls.enabled = true;
+
     }
 }

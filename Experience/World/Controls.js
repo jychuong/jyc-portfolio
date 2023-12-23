@@ -38,7 +38,8 @@ export default class Controls {
     animations() {
         ScrollTrigger.matchMedia({
             //desktop
-            "(min-width:1px)": () => {
+            "(min-width:969px)": () => {
+                console.log("desktop");
                 this.room.scale.set(1.3, 1.3, 1.3)
                 this.room.position.set(-0.5, -0.8, 0)
                 this.rectLight.width = 2
@@ -52,16 +53,16 @@ export default class Controls {
                         invalidateOnRefresh: false,
                     }).to(
                         this.room.scale, {
-                        x: 4,z: 4,y: 4,
+                        x: 4, z: 4, y: 4,
                         duration: 1.5
                     },
                         "same")
                         .to(this.room.position, {
-                            x: -4.8,y: 1,z: 2,
+                            x: -4.8, y: 1, z: 2,
                             duration: 1.5
                         }, "same")
                         .to(this.camera.orthographicCamera.position, {
-                            z: -Math.PI / 6,y: Math.PI / 6,x: -Math.PI / 6,
+                            z: -Math.PI / 6, y: Math.PI / 6, x: -Math.PI / 6,
                             duration: 1.5
                         }, "same")
                         .to(this.rectLight, {
@@ -90,16 +91,16 @@ export default class Controls {
                     this.tl2 = new GSAP.timeline();
                     this.tl2.to(
                         this.room.scale, {
-                        x: 5,z: 5,y: 5,
+                        x: 5, z: 5, y: 5,
                         duration: 1.5
                     },
                         "same")
                     this.tl2.to(this.room.position, {
-                        x: 0,y: 1,z: 5,
+                        x: 0, y: 1, z: 5,
                         duration: 1.5
                     }, "same")
                     this.tl2.to(this.camera.orthographicCamera.position, {
-                        z: -Math.PI / 6,y: 3,x: 1,
+                        z: -Math.PI / 6, y: 3, x: 1,
                         duration: 1.5
                     }, "same")
                     this.tl2.to(this.rectLight, {
@@ -126,16 +127,16 @@ export default class Controls {
                     this.tl3 = new GSAP.timeline();
                     this.tl3.to(
                         this.room.scale, {
-                        x: 1,z: 1,y: 1,
+                        x: 1, z: 1, y: 1,
                         duration: 1.5
                     },
                         "same")
                     this.tl3.to(this.room.position, {
-                        x: 1.2,y: 0,z: 0,
+                        x: 1.2, y: 0, z: 0,
                         duration: 1.5
                     }, "same")
                     this.tl3.to(this.camera.orthographicCamera.position, {
-                        z: -Math.PI / 6,y: 3,x: 1,
+                        z: -Math.PI / 6, y: 3, x: 1,
                         duration: 1.5
                     }, "same")
                     this.tl3.to(this.rectLight, {
@@ -144,7 +145,7 @@ export default class Controls {
                         duration: 1.5
                     }, "same")
                     this.tl3.to(this.pointLight.position, {
-                        x: -0.4,y: .12,z: 0.06568,
+                        x: -0.4, y: .12, z: 0.06568,
                         duration: 1.5
                     }, "same");
                     this.tl3.to(this.pointLight, {
@@ -168,17 +169,17 @@ export default class Controls {
                     this.tl5 = new GSAP.timeline();
                     this.tl5.to(
                         this.room.scale, {
-                        x: 4,z: 4,y: 4,
+                        x: 4, z: 4, y: 4,
                         duration: 1.5
                     },
                         "same")
 
                     this.tl5.to(this.room.position, {
-                        x: 4.4,y: 1,z: 5,
+                        x: 4.4, y: 1, z: 5,
                         duration: 1.5
                     }, "same")
                     this.tl5.to(this.camera.orthographicCamera.position, {
-                        x: 1,y: 3,z: -Math.PI / 6,
+                        x: 1, y: 3, z: -Math.PI / 6,
                         duration: 1.5
                     }, "same")
                     this.tl5.to(this.rectLight, {
@@ -187,7 +188,7 @@ export default class Controls {
                         duration: 1.5
                     }, "same")
                     this.tl5.to(this.pointLight.position, {
-                        x: -0.4,y: 0.3,z: .1,
+                        x: -0.4, y: 0.3, z: .1,
                         duration: 1.5
                     }, "same");
                     this.tl5.to(this.pointLight, {
@@ -199,9 +200,9 @@ export default class Controls {
                         duration: 1.5
                     }, "same")
                     this.tl5.to(".main-nav", {
-                            y: "-50vh",
-                            duration: 1.5
-                        }, "same")
+                        y: "-50vh",
+                        duration: 1.5
+                    }, "same")
                     GSAP.delayedCall(1.5, this.enableCloseBtn);
                 });
                 /////////////reset ///////////////////
@@ -211,19 +212,19 @@ export default class Controls {
                     this.tl4 = new GSAP.timeline();
 
                     this.tl4.to(this.camera.orthographicCamera.position, {
-                        x: -0.05155554232803819,y: 3.1443428682390167,z: 5.230721743030281,
+                        x: -0.05155554232803819, y: 3.1443428682390167, z: 5.230721743030281,
                         duration: 1,
                     }, "same")
                     this.tl4.to(this.camera.orthographicCamera.rotation, {
-                        x: -0.5707963267948967,y: 0,z: 0,
+                        x: -0.5707963267948967, y: 0, z: 0,
                         duration: 1,
                     }, "same")
                     this.tl4.to(this.room.scale, {
-                        x: 1.3,y: 1.3,z: 1.3,
+                        x: 1.3, y: 1.3, z: 1.3,
                         duration: 1,
                     }, "same")
                     this.tl4.to(this.room.position, {
-                        x: -0.5,y: 0,z: 1.3,
+                        x: -0.5, y: 0, z: 1.3,
                         duration: 1,
                     }, "same")
                     this.tl4.to(this.rectLight, {
@@ -232,7 +233,7 @@ export default class Controls {
                         duration: 1
                     }, "same")
                     this.tl4.to(this.pointLight.position, {
-                        x: -0.5,y: .1,z: 0.05568,
+                        x: -0.5, y: .1, z: 0.05568,
                         duration: 1
                     }, "same")
                     this.tl4.to(this.pointLight, {
@@ -247,10 +248,154 @@ export default class Controls {
                         y: "0vh",
                         duration: .8
                     }, "same")
-                    .to(".hero-main-title", {
-                        x: "0%",
+                        .to(".hero-main-title", {
+                            x: "0%",
+                            duration: 1.5
+                        }, "same")
+                });
+            },
+
+            //mobile
+            "(max-width:969px)": () => {
+                console.log("mobile");
+                this.room.scale.set(0.8, 0.8, 0.8)
+                this.room.position.set(-0.25, -0.5, 0)
+                this.rectLight.width = 1
+                this.rectLight.height = 1
+                this.pointLight.intensity = 0.5
+
+                document.getElementById('3d-proj').addEventListener('click', () => {
+                    this.camera.controls.enabled = false;
+                    document.getElementById('3d').style.display = 'block';
+                    this.tl = new GSAP.timeline({
+                        invalidateOnRefresh: false,
+                    }).to(
+                        this.room.position, {
+                        x: 4,
                         duration: 1.5
                     }, "same")
+                        .to(".section", {
+                            x: "0vw",
+                            duration: 1.5
+                        }, "same")
+                        .to(".main-nav", {
+                            y: "-50vh",
+                            duration: 1.5
+                        }, "same")
+                    GSAP.delayedCall(1.5, this.enableCloseBtn);
+                });
+                //////////////////////// digital illustartions /////////////////////////////////
+                document.getElementById('digi').addEventListener('click', () => {
+                    this.camera.controls.enabled = false;
+                    document.getElementById('di').style.display = 'block';
+                    this.tl2 = new GSAP.timeline();
+                    this.tl2.to(
+                        this.room.position, {
+                        x: 4,
+                        duration: 1.5
+                    }, "same")
+                    this.tl2.to(this.rectLight, {
+                        width: 2,
+                        height: 2,
+                        duration: 1.5
+                    }, "same")
+                    this.tl2.to(".section", {
+                        x: "0vw",
+                        duration: 1.5
+                    }, "same")
+                        .to(".main-nav", {
+                            y: "-50vh",
+                            duration: 1.5
+                        }, "same")
+
+                    GSAP.delayedCall(1.5, this.enableCloseBtn);
+                });
+
+                ///////////////////////////////////////////////about
+                document.getElementById('about-info').addEventListener('click', () => {
+                    this.camera.controls.enabled = false;
+                    document.getElementById('about').style.display = 'block';
+                    this.tl3 = new GSAP.timeline();
+                    this.tl3.to(
+                        this.room.position, {
+                        x: 4,
+                        duration: 1.5
+                    }, "same")
+                    this.tl3.to(".section", {
+                        x: "0vw",
+                        duration: 1.5
+                    }, "same")
+                        .to(".main-nav", {
+                            y: "-50vh",
+                            duration: 1.5
+                        }, "same")
+                    GSAP.delayedCall(1.5, this.enableCloseBtn);
+                });
+                //////////////////////////////////// other////////////////////////////////
+                document.getElementById('misc').addEventListener('click', () => {
+                    this.camera.controls.enabled = false;
+                    document.getElementById('other').style.display = 'block';
+                    this.tl5 = new GSAP.timeline();
+                    this.tl5.to(
+                        this.room.position, {
+                        x: 4,
+                        duration: 1.5
+                    },
+                        "same")
+                    this.tl5.to(".section", {
+                        x: "0vw",
+                        duration: 1.5
+                    }, "same")
+                    this.tl5.to(".main-nav", {
+                        y: "-50vh",
+                        duration: 1.5
+                    }, "same")
+                    GSAP.delayedCall(1.5, this.enableCloseBtn);
+                });
+                /////////////reset ///////////////////
+                document.getElementById('close-btn').addEventListener('click', () => {
+                    this.disableCloseBtn();
+                    this.camera.controls.enabled = true;
+                    this.tl4 = new GSAP.timeline();
+
+                    this.tl4.to(this.camera.orthographicCamera.position, {
+                        x: -0.05155554232803819, y: 3.1443428682390167, z: 5.230721743030281,
+                        duration: 1,
+                    }, "same")
+                    this.tl4.to(this.camera.orthographicCamera.rotation, {
+                        x: -0.5707963267948967, y: 0, z: 0,
+                        duration: 1,
+                    }, "same")
+                    this.tl4.to(this.room.scale, {
+                        x: 0.8, y: 0.8, z: 0.8,
+                        duration: 1,
+                    }, "same")
+                    this.tl4.to(this.room.position, {
+                        x: -0.25, y: 0, z: 1.4,
+                        duration: 1,
+                    }, "same")
+                    this.tl4.to(this.rectLight, {
+                        width: 1,
+                        height: 1,
+                        duration: 1
+                    }, "same")
+                    this.tl4.to(this.pointLight.position, {
+                        x: -0.5, y: .1, z: 0.05568,
+                        duration: 1
+                    }, "same")
+                    this.tl4.to(this.pointLight, {
+                        intensity: .5,
+                        duration: 1
+                    }, "same")
+                    this.tl4.to(".section", {
+                        x: "-100vw",
+                        duration: 1
+                    }, "same")
+                    this.tl4.to(".main-nav", {
+                        y: "0vh",
+                        duration: .8
+                    }, "same")
+
                 });
             },
         });

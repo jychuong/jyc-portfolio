@@ -252,7 +252,7 @@ header {
   border-radius: 999px;
   margin: 0px 16px;
   border: none;
-  box-shadow: rgb(255, 255, 255) 0px 0px 0px 3px;
+  box-shadow: rgb(201, 240, 255) 0px 0px 0px 3px;
 }
 
 .toggle-circle {
@@ -404,13 +404,13 @@ h2{
 
 /* Media Queries */
 
-/* @media (max-width: 968px) {
+@media (max-width: 968px) {
   .section {
-    width: 50%;
+    width: 100%;
   }
 
 
-} */
+}
 
 #close-btn {
   position: fixed;
