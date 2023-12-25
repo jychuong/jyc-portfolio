@@ -8,7 +8,7 @@ export default [
     {
         name: "vid",
         type: "videoTexture",
-        path: "/textures/bg.mp4",
+        path: "/textures/bg2.mp4",
     },
 
 ]
