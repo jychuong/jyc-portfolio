@@ -224,7 +224,7 @@ export default class Controls {
                         duration: 1,
                     }, "same")
                     this.tl4.to(this.room.position, {
-                        x: -0.5, y: 0, z: 1.3,
+                        x: -0.5, y: -0.14, z: 1.3,
                         duration: 1,
                     }, "same")
                     this.tl4.to(this.rectLight, {

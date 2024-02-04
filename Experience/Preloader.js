@@ -105,14 +105,8 @@ export default class Preloader extends EventEmitter {
                         opacity: 1,
                     },
                     "same"
-                )
-                .to(
-                    ".main-nav",
-                    {
-                        opacity: 1,
-                    },
-                    "same"
                 );
+          
 
             this.tl.to(this.roomChildren.wall.scale, {
                 x: 1, y: 1, z: 1,
@@ -220,7 +214,14 @@ export default class Preloader extends EventEmitter {
                     ease: "power1.out",
                     duration: .5,
                     onComplete: resolve
-                }, "last", ">-0.3");
+                }, "last", ">-0.3")
+                .to(
+                    ".main-nav",
+                    {
+                        opacity: 1,
+                    }, ">-0.2"
+    
+                );
         });
     }
 
