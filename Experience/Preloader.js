@@ -174,36 +174,36 @@ export default class Preloader extends EventEmitter {
                     ease: "back.out(2)",
                     duration: .5,
                 }, "comp", ">-0.3")
-                .to(this.roomChildren.easel.scale, {
-                    x: 1, y: 1, z: 1,
-                    ease: "back.out(2)",
-                    duration: .5,
-                }, ">-0.35")
-                .to(this.roomChildren.paints.scale, {
-                    x: 1, y: 1, z: 1,
-                    ease: "back.out(2)",
-                    duration: .5,
-                }, ">-0.35")
-                .to(this.roomChildren.flowers.scale, {
-                    x: 1, y: 1, z: 1,
-                    ease: "back.out(2)",
-                    duration: .5,
-                }, "shelf", ">-0.3")
-                .to(this.roomChildren.shelf.scale, {
-                    x: 1, y: 1, z: 1,
-                    ease: "back.out(2)",
-                    duration: .5,
-                }, "shelf", ">-0.7")
                 .to(this.roomChildren.snakeplant.scale, {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
                     duration: .5,
-                }, ">-0.8")
+                }, ">-0.3")
+                .to(this.roomChildren.easel.scale, {
+                    x: 1, y: 1, z: 1,
+                    ease: "back.out(2)",
+                    duration: .5,
+                }, "paintss",">-0.35")
+                .to(this.roomChildren.paints.scale, {
+                    x: 1, y: 1, z: 1,
+                    ease: "back.out(2)",
+                    duration: .5,
+                }, "paintss", ">-0.35")
+                .to(this.roomChildren.flowers.scale, {
+                    x: 1, y: 1, z: 1,
+                    ease: "back.out(2)",
+                    duration: .5,
+                }, "shelf", ">-0.35")
+                .to(this.roomChildren.shelf.scale, {
+                    x: 1, y: 1, z: 1,
+                    ease: "back.out(2)",
+                    duration: .5,
+                }, "shelf", ">-0.35")
                 .to(this.roomChildren.paintings.scale, {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
                     duration: .5,
-                }, ">-0.5")
+                }, ">-0.4")
                 .to(".hero-main-title", {
                     x: '0%',
                     ease: "power1.out",
