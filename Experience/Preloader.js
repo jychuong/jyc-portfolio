@@ -112,17 +112,17 @@ export default class Preloader extends EventEmitter {
                 x: 1, y: 1, z: 1,
                 ease: "back.out(2)",
                 duration: .5,
-            }, "room", ">-0.5")
+            }, "room", ">-0.2")
                 .to(this.roomChildren.floor.scale, {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
                     duration: .5,
-                }, "room", ">-0.5")
+                }, "room", ">-0.2")
                 .to(this.roomChildren.bed.scale, {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
                     duration: .5,
-                }, "bed", ">-0.4")
+                }, "bed", ">-0.3")
                 .to(this.roomChildren.toys.scale, {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
@@ -137,7 +137,7 @@ export default class Preloader extends EventEmitter {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
                     duration: .5,
-                }, ">-0.2")
+                }, ">-0.3")
                 .to(this.roomChildren.coaster.scale, {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
@@ -183,12 +183,12 @@ export default class Preloader extends EventEmitter {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
                     duration: .5,
-                }, "paintss",">-0.35")
+                }, "paintss",">-0.4")
                 .to(this.roomChildren.paints.scale, {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
                     duration: .5,
-                }, "paintss", ">-0.35")
+                }, "paintss", ">-0.4")
                 .to(this.roomChildren.flowers.scale, {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
@@ -203,7 +203,7 @@ export default class Preloader extends EventEmitter {
                     x: 1, y: 1, z: 1,
                     ease: "back.out(2)",
                     duration: .5,
-                }, ">-0.4")
+                },"shelf", ">-0.35")
                 .to(".hero-main-title", {
                     x: '0%',
                     ease: "power1.out",
@@ -213,13 +213,13 @@ export default class Preloader extends EventEmitter {
                     x: '0%',
                     ease: "power1.out",
                     duration: .5,
-                    onComplete: resolve
                 }, "last", ">-0.3")
                 .to(
                     ".main-nav",
                     {
                         opacity: 1,
-                    }, ">-0.2"
+                        onComplete: resolve
+                    }, ">-0.5"
     
                 );
         });
