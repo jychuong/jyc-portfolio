@@ -85,40 +85,40 @@ export default class Controls {
                     GSAP.delayedCall(1.5, this.enableCloseBtn);
                 });
                 //////////////////////// digital illustartions /////////////////////////////////
-                document.getElementById('digi').addEventListener('click', () => {
-                    this.camera.controls.enabled = false;
-                    document.getElementById('di').style.display = 'block';
-                    this.tl2 = new GSAP.timeline();
-                    this.tl2.to(
-                        this.room.scale, {
-                        x: 5, z: 5, y: 5,
-                        duration: 1.5
-                    },
-                        "same")
-                    this.tl2.to(this.room.position, {
-                        x: 0, y: 1, z: 5,
-                        duration: 1.5
-                    }, "same")
-                    this.tl2.to(this.camera.orthographicCamera.position, {
-                        z: -Math.PI / 6, y: 3, x: 1,
-                        duration: 1.5
-                    }, "same")
-                    this.tl2.to(this.rectLight, {
-                        width: 7,
-                        height: 7,
-                        duration: 1.5
-                    }, "same")
-                    this.tl2.to(".section", {
-                        x: "0vw",
-                        duration: 1.5
-                    }, "same")
-                        .to(".main-nav", {
-                            y: "-50vh",
-                            duration: 1.5
-                        }, "same")
+                // document.getElementById('digi').addEventListener('click', () => {
+                //     this.camera.controls.enabled = false;
+                //     document.getElementById('di').style.display = 'block';
+                //     this.tl2 = new GSAP.timeline();
+                //     this.tl2.to(
+                //         this.room.scale, {
+                //         x: 5, z: 5, y: 5,
+                //         duration: 1.5
+                //     },
+                //         "same")
+                //     this.tl2.to(this.room.position, {
+                //         x: 0, y: 1, z: 5,
+                //         duration: 1.5
+                //     }, "same")
+                //     this.tl2.to(this.camera.orthographicCamera.position, {
+                //         z: -Math.PI / 6, y: 3, x: 1,
+                //         duration: 1.5
+                //     }, "same")
+                //     this.tl2.to(this.rectLight, {
+                //         width: 7,
+                //         height: 7,
+                //         duration: 1.5
+                //     }, "same")
+                //     this.tl2.to(".section", {
+                //         x: "0vw",
+                //         duration: 1.5
+                //     }, "same")
+                //         .to(".main-nav", {
+                //             y: "-50vh",
+                //             duration: 1.5
+                //         }, "same")
 
-                    GSAP.delayedCall(1.5, this.enableCloseBtn);
-                });
+                //     GSAP.delayedCall(1.5, this.enableCloseBtn);
+                // });
 
                 ///////////////////////////////////////////////about
                 document.getElementById('about-info').addEventListener('click', () => {
