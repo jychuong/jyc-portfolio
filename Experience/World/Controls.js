@@ -285,31 +285,31 @@ export default class Controls {
                     GSAP.delayedCall(1.5, this.enableCloseBtn);
                 });
                 //////////////////////// digital illustartions /////////////////////////////////
-                document.getElementById('digi').addEventListener('click', () => {
-                    this.camera.controls.enabled = false;
-                    document.getElementById('di').style.display = 'block';
-                    this.tl2 = new GSAP.timeline();
-                    this.tl2.to(
-                        this.room.position, {
-                        x: 4,
-                        duration: 1.5
-                    }, "same")
-                    this.tl2.to(this.rectLight, {
-                        width: 2,
-                        height: 2,
-                        duration: 1.5
-                    }, "same")
-                    this.tl2.to(".section", {
-                        x: "0vw",
-                        duration: 1.5
-                    }, "same")
-                        .to(".main-nav", {
-                            y: "-50vh",
-                            duration: 1.5
-                        }, "same")
+                // document.getElementById('digi').addEventListener('click', () => {
+                //     this.camera.controls.enabled = false;
+                //     document.getElementById('di').style.display = 'block';
+                //     this.tl2 = new GSAP.timeline();
+                //     this.tl2.to(
+                //         this.room.position, {
+                //         x: 4,
+                //         duration: 1.5
+                //     }, "same")
+                //     this.tl2.to(this.rectLight, {
+                //         width: 2,
+                //         height: 2,
+                //         duration: 1.5
+                //     }, "same")
+                //     this.tl2.to(".section", {
+                //         x: "0vw",
+                //         duration: 1.5
+                //     }, "same")
+                //         .to(".main-nav", {
+                //             y: "-50vh",
+                //             duration: 1.5
+                //         }, "same")
 
-                    GSAP.delayedCall(1.5, this.enableCloseBtn);
-                });
+                //     GSAP.delayedCall(1.5, this.enableCloseBtn);
+                // });
 
                 ///////////////////////////////////////////////about
                 document.getElementById('about-info').addEventListener('click', () => {
