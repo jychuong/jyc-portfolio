@@ -485,7 +485,7 @@ img {
     flex-direction: row;
     justify-content: right;
     align-items: center;
-    top: 28px;
+    top: -3px;
     right: 20px;
     z-index: 99999999;
   }
